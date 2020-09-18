@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    tools:context=".fragment.AddWordFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bg_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <TextView
+            android:background="@drawable/bg_image_dialog"
+            android:layout_weight="1"
+            android:text="Please add new word."
+            android:textColor="@android:color/white"
+            android:textAppearance="@android:anim/slide_in_left"
+            android:textStyle="bold"
+            android:textSize="@dimen/textheading"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="7"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <EditText
+                android:id="@+id/edt_germanword_add"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Add German word"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"/>
+            <EditText
+                android:id="@+id/edt_englishmeaning_add"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Add German word"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"/>
+            <EditText
+                android:id="@+id/edt_example_add"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Add Example"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"/>
+
+                <Button
+                    android:id="@+id/btn_addword"
+                    android:background="@drawable/bg_button_cancel"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Add"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

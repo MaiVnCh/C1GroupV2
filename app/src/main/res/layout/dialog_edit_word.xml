@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+        
+        <TextView
+            android:background="@drawable/bg_image_dialog"
+            android:layout_weight="1"
+            android:text="Please edit your word."
+            android:textColor="@android:color/white"
+            android:textAppearance="@android:anim/slide_in_left"
+            android:textStyle="bold"
+            android:textSize="@dimen/textheading"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <EditText
+                android:id="@+id/edt_germanword"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Edit German word"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"/>
+            <EditText
+                android:id="@+id/edt_englishmeaning"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Edit German word"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"/>
+            <EditText
+                android:id="@+id/edt_example"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Edit German word"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"/>
+
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"/>
+
+            <LinearLayout
+                android:layout_marginBottom="30dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_canel_dialog_custom"
+                    android:background="@drawable/bg_button_cancel"
+                    android:textAllCaps="false"
+                    android:text="Cancel"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"/>
+                <Button
+                    android:id="@+id/btn_ok_dialog_custom"
+                    android:background="@drawable/bg_button_ok"
+                    android:layout_marginLeft="25dp"
+                    android:textAllCaps="false"
+                    android:text="Ok"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        
+    </LinearLayout>

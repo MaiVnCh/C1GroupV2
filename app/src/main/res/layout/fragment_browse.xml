@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    tools:context=".fragment.BrowseFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:text="Browse lessons:"
+        android:paddingLeft="@dimen/padding"
+        android:textColor="@color/surface"
+        android:textSize="@dimen/textheading"
+        android:paddingTop="@dimen/padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:background="@color/colorPrimary"
+        android:layout_width="180dp"
+        android:layout_height="2dp"/>
+
+    <LinearLayout
+        android:padding="@dimen/padding"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_lesson1"
+            android:text="Lesson 1"
+            android:layout_marginTop="@dimen/padding"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize"
+            android:textAllCaps="false"
+            android:background="@drawable/shape_corner_radius_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_lesson2"
+            android:layout_marginTop="@dimen/padding"
+            android:text="Lesson 2"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize"
+            android:textAllCaps="false"
+            android:background="@drawable/shape_corner_radius_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_lesson3"
+            android:text="Lesson 3"
+            android:layout_marginTop="@dimen/padding"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize"
+            android:textAllCaps="false"
+            android:background="@drawable/shape_corner_radius_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_lesson4"
+            android:layout_marginTop="@dimen/padding"
+            android:text="Lesson 4"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize"
+            android:textAllCaps="false"
+            android:background="@drawable/shape_corner_radius_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_lesson5"
+            android:text="Lesson 5"
+            android:layout_marginTop="@dimen/padding"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize"
+            android:textAllCaps="false"
+            android:background="@drawable/shape_corner_radius_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_lesson6"
+            android:layout_marginTop="@dimen/padding"
+            android:text="Lesson 6"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize"
+            android:textAllCaps="false"
+            android:background="@drawable/shape_corner_radius_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_lesson7"
+            android:text="Lesson 7"
+            android:layout_marginTop="@dimen/padding"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize"
+            android:textAllCaps="false"
+            android:background="@drawable/shape_corner_radius_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_lesson8"
+            android:layout_marginTop="@dimen/padding"
+            android:text="Lesson 8"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize"
+            android:textAllCaps="false"
+            android:background="@drawable/shape_corner_radius_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+</FrameLayout>

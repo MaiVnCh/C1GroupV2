@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_ubungen_onclick"
+    android:gravity="center"
+    android:backgroundTint="@color/surface"
+    android:orientation="vertical"
+    android:background="?selectableItemBackground">
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_ubungen_number"
+        android:text="A.1.a"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:background="@drawable/shape_corner_radius_blue"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_width="60dp"
+        android:padding="@dimen/padding_small"
+        android:layout_height="40dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_ubungen_theme"
+            android:paddingLeft="@dimen/padding"
+            android:paddingTop="@dimen/padding_small"
+            android:text="The theme is..."
+            android:paddingRight="@dimen/padding"
+            android:textStyle="bold"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/textsize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/tv_ubungen_instruction"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:paddingBottom="@dimen/padding_small"
+            android:text="Instruction Instruction Instruction Instruction Instruction ..."
+            android:textSize="@dimen/textsize"
+            android:textColor="@color/colorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+</LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_ubungen_example"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:paddingBottom="@dimen/padding_small"
+            android:text="Example Example Example Example Example Example "
+            android:textSize="@dimen/textsize"
+            android:textStyle="italic"
+            android:textColor="@color/colorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/tv_ubungen_content"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:paddingBottom="@dimen/padding_small"
+            android:text="Content Content Content Content
+             Content Content Content Content Content Content
+              Content Content Content Content Content "
+            android:textSize="@dimen/textsize"
+            android:textColor="@color/colorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/tv_ubungen_answer"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:paddingBottom="@dimen/padding_small"
+            android:textSize="@dimen/textsize"
+            android:textStyle="italic"
+            android:textColor="@color/error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+        <View
+            android:background="@color/colorSecondaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+</LinearLayout>

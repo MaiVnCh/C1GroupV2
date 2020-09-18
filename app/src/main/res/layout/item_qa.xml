@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/qa_onclick"
+    android:gravity="center"
+    android:backgroundTint="@color/surface"
+    android:orientation="horizontal"
+    android:background="?selectableItemBackground">
+
+    <TextView
+        android:id="@+id/imv_avatar"
+        android:text="M"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:paddingLeft="8dp"
+        android:background="@drawable/shape_oval"
+        android:layout_margin="@dimen/padding"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:paddingLeft="@dimen/padding"
+        android:paddingTop="@dimen/padding_small"
+        android:text="My question is ..."
+        android:id="@+id/tv_question"
+        android:paddingRight="@dimen/padding"
+        android:textStyle="bold"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/textsize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:paddingLeft="@dimen/padding"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingRight="@dimen/padding"
+        android:paddingBottom="@dimen/padding"
+        android:text="Ok, so you can say like this:..."
+        android:id="@+id/tv_answer"
+        android:textSize="@dimen/textsize"
+        android:textColor="@color/colorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+        <View
+            android:background="@color/colorSecondaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
