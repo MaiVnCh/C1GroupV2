@@ -26,7 +26,7 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_weight="7"
+            android:layout_weight="8"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="0dp">
@@ -37,7 +37,7 @@
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:text="Add German word"
+                android:hint="Add German word"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"/>
             <EditText
@@ -46,7 +46,7 @@
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:text="Add German word"
+                android:hint="Add English meaning"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"/>
             <EditText
@@ -55,20 +55,38 @@
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:text="Add Example"
+                android:hint="Add Example"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"/>
+            <LinearLayout
+                android:layout_marginBottom="30dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_cancel_add_word"
+                    android:background="@drawable/bg_button_ok"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:textAllCaps="false"
+                    android:text="Cancel"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
 
                 <Button
                     android:id="@+id/btn_addword"
                     android:background="@drawable/bg_button_cancel"
                     android:textAllCaps="false"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="@dimen/padding_small"
                     android:text="Add"
-                    android:layout_width="200dp"
-                    android:layout_height="60dp"/>
-
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

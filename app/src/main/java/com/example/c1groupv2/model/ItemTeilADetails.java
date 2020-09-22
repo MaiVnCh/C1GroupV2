@@ -2,12 +2,24 @@ package com.example.c1groupv2.model;
 
 public class ItemTeilADetails {
 
-    private String id, teilType, number, theme,instruction, example, content, answer, lessonId;
-
+    private String  teilType, number, theme,instruction, example, content, answer, lessonId;
+    private int id;
     public ItemTeilADetails() {
     }
 
-    public ItemTeilADetails(String teilType, String number,String theme, String instruction, String example, String content, String answer, String lessonId) {
+    public ItemTeilADetails(int id, String teilType, String number, String theme, String instruction, String example, String content, String answer, String lessonId) {
+        this.id = id;
+        this.teilType = teilType;
+        this.number = number;
+        this.theme = theme;
+        this.instruction = instruction;
+        this.example = example;
+        this.content = content;
+        this.answer = answer;
+        this.lessonId = lessonId;
+    }
+
+    public ItemTeilADetails(String teilType, String number, String theme, String instruction, String example, String content, String answer, String lessonId) {
         this.teilType = teilType;
         this.number = number;
         this.theme = theme;
@@ -37,11 +49,11 @@ public class ItemTeilADetails {
         this.answer = answer;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -171,7 +171,7 @@ public class QAFragment extends Fragment {
         addQADialog.setOnClickAddQADialogListener(new OnClickAddQADialogListener() {
             @Override
             public void onCancelButtonClick() {
-                Toast.makeText(getContext(), "cancel roi", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Cancelled", Toast.LENGTH_LONG).show();
 
             }
 

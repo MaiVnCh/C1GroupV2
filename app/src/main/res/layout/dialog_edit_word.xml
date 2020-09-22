@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
-                    android:id="@+id/btn_canel_dialog_custom"
+                    android:id="@+id/btn_cancel_dialog_custom"
                     android:background="@drawable/bg_button_cancel"
                     android:textAllCaps="false"
                     android:text="Cancel"

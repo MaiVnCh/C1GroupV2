@@ -1,19 +1,17 @@
 package com.example.c1groupv2.fragment;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentResultListener;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
-
+import com.example.c1groupv2.DatabaseManager;
 import com.example.c1groupv2.R;
 import com.example.c1groupv2.adapter.TeilADetailsAdapter;
 import com.example.c1groupv2.model.ItemTeilADetails;
@@ -27,9 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 
-public class TeilAFragment extends Fragment{
-    private FirebaseDatabase database;
-    private DatabaseReference databaseReference;
+public class TeilAFragmentWithDB extends Fragment{
 
     private RecyclerView rcTeilADetails;
     private TeilADetailsAdapter teilADetailsAdapter;
@@ -37,13 +33,14 @@ public class TeilAFragment extends Fragment{
 
     private ShowUbungenFragment showUbungenFragment = new ShowUbungenFragment();
 
-    public TeilAFragment() {
+    public TeilAFragmentWithDB() {
         // Required empty public constructor
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        aDetailsArrayList = DatabaseManager.getInstance(getContext()).getAllUbungenA();
     }
 
     @Override
@@ -51,8 +48,6 @@ public class TeilAFragment extends Fragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_teil_a, container, false);
-           database = FirebaseDatabase.getInstance();
-           getDataTeilADetails();
            rcTeilADetails =view.findViewById(R.id.rc_teila_details);
 
            teilADetailsAdapter = new TeilADetailsAdapter(aDetailsArrayList,getActivity());
@@ -65,25 +60,6 @@ public class TeilAFragment extends Fragment{
         return view;
     }
 
-    private void getDataTeilADetails() {
-        database.getReference("NEW_TEILA_UBUNGEN").addValueEventListener(new ValueEventListener() {
-
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                aDetailsArrayList.clear();
-                for (DataSnapshot child : snapshot.getChildren()) {
-                    // Extract a Message object from the DataSnapshot
-                    ItemTeilADetails itemTeilADetails = child.getValue(ItemTeilADetails.class);
-                    aDetailsArrayList.add(itemTeilADetails);
-                    teilADetailsAdapter.notifyDataSetChanged();
-                }
-
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });
-    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {

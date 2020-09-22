@@ -24,9 +24,6 @@ public class EditWordDialog extends Dialog implements View.OnClickListener {
 
     private OnClickButtonDialogEditWordListener onClickButtonDialogEditWordListener;
 
-    public void setOnClickButtonDialogEditWordListener(OnClickButtonDialogEditWordListener onClickButtonDialogEditWordListener) {
-        this.onClickButtonDialogEditWordListener = onClickButtonDialogEditWordListener;
-    }
 
     public EditWordDialog(@NonNull Context context, String german, String english, String example) {
         super(context);
@@ -46,7 +43,7 @@ public class EditWordDialog extends Dialog implements View.OnClickListener {
     }
 
     private void initViews() {
-        findViewById(R.id.btn_canel_dialog_custom).setOnClickListener(this);
+        findViewById(R.id.btn_cancel_dialog_custom).setOnClickListener(this);
         findViewById(R.id.btn_ok_dialog_custom).setOnClickListener(this);
         edtGermanword = findViewById(R.id.edt_germanword);
         edtEnglishmeaning = findViewById(R.id.edt_englishmeaning);
@@ -56,7 +53,7 @@ public class EditWordDialog extends Dialog implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btn_canel_dialog_custom:
+            case R.id.btn_cancel_dialog_custom:
                 if (onClickButtonDialogEditWordListener!=null){
                     onClickButtonDialogEditWordListener.onCancelButtonClick();
                 }
@@ -96,4 +93,9 @@ public class EditWordDialog extends Dialog implements View.OnClickListener {
     public void setExample(String example) {
         this.example = example;
     }
+
+    public void setOnClickButtonDialogEditWordListener(OnClickButtonDialogEditWordListener onClickButtonDialogEditWordListener) {
+        this.onClickButtonDialogEditWordListener = onClickButtonDialogEditWordListener;
+    }
+
 }

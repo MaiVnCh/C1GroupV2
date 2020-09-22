@@ -115,7 +115,6 @@ public class NewWordListFragment extends Fragment {
                 String english = String.valueOf(itemNewWord.getEnglishMeaning());
                 String example = String.valueOf(itemNewWord.getExample());
 
-                Toast.makeText(getContext(), id, Toast.LENGTH_LONG).show();
                 editDialog();
                 if (!editWordDialog.isShowing()) {
                     editWordDialog.setGerman(german);
@@ -155,19 +154,18 @@ public class NewWordListFragment extends Fragment {
                 databaseReference = database.getReference("NEW_WORDS").child(wordArrayList.get(positionEdit).getId());
                 databaseReference.setValue(wordArrayList.get(positionEdit));
                 newWordAdapter.notifyDataSetChanged();
-
             }
         });
     }
     private void deleteWord(int position){
-        Toast.makeText(getContext(), "Da xoa", Toast.LENGTH_LONG).show();
+        Toast.makeText(getContext(), "Deleted", Toast.LENGTH_LONG).show();
         database.getReference("NEW_WORDS").child(wordArrayList.get(position).getId()).removeValue(new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                 if (error == null){
-                    Toast.makeText(getContext(), "Xoa thanh cong", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Deleted successfully", Toast.LENGTH_LONG).show();
                 } else {
-                    Toast.makeText(getContext(), "Xoa that bai, " + error.getMessage(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Delete unsuccessfully" + error.getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -184,7 +182,7 @@ public class NewWordListFragment extends Fragment {
             }
         });
 
-        builder.setNegativeButton("Thoát", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 

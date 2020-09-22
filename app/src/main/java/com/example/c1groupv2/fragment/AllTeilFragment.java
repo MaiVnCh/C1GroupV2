@@ -11,10 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.c1groupv2.R;
+import com.example.c1groupv2.util.OnItemAllTeilClickListener;
 
 public class AllTeilFragment extends Fragment implements View.OnClickListener {
 
-    private TeilAFragment teilAFragment;
     public AllTeilFragment() {
         // Required empty public constructor
     }
@@ -22,7 +22,6 @@ public class AllTeilFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        teilAFragment = new TeilAFragment();
     }
 
     @Override
@@ -55,13 +54,19 @@ public class AllTeilFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.ll_click_teilA:
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.lesson_activity_container, teilAFragment )
-                        .addToBackStack(null)
-                        .commit();
+                if (onItemAllTeilClickListener!= null){
+                    onItemAllTeilClickListener.onClickItemAllTeil(v);
+                }
+
                 break;
 
         }
 
+    }
+
+    private OnItemAllTeilClickListener onItemAllTeilClickListener;
+
+    public void setOnItemAllTeilClickListener(OnItemAllTeilClickListener onItemAllTeilClickListener) {
+        this.onItemAllTeilClickListener = onItemAllTeilClickListener;
     }
 }

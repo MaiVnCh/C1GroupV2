@@ -32,7 +32,7 @@ public class AddWordFragment extends Fragment implements View.OnClickListener {
 
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference;
-    private Button btnAddWord;
+    private Button btnAddWord, btnCancel;
     private EditText edtGermanWord, edtEnglishMeaning, edtExample;
     public AddWordFragment() {
     }
@@ -60,6 +60,8 @@ public class AddWordFragment extends Fragment implements View.OnClickListener {
     private void initViews() {
         btnAddWord = getActivity().findViewById(R.id.btn_addword);
         btnAddWord.setOnClickListener(this);
+        btnCancel = getActivity().findViewById(R.id.btn_cancel_add_word);
+        btnCancel.setOnClickListener(this);
         edtGermanWord = getActivity().findViewById(R.id.edt_germanword_add);
         edtEnglishMeaning = getActivity().findViewById(R.id.edt_englishmeaning_add);
         edtExample = getActivity().findViewById(R.id.edt_example_add);
@@ -86,6 +88,11 @@ public class AddWordFragment extends Fragment implements View.OnClickListener {
                         }
                     }
                 });
+                break;
+            case R.id.btn_cancel_add_word:
+                edtGermanWord.getText().clear();
+                edtEnglishMeaning.getText().clear();
+                edtExample.getText().clear();
                 break;
         }
 

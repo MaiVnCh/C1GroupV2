@@ -27,7 +27,7 @@ public class ExercisesFragment extends Fragment implements View.OnClickListener 
 
     private ViewPager viewPager;
     private ExerciseHomePageAdapter exerciseHomePageAdapter;
-    private EditText edtNumber, edtTheme, edtInstruction, edtExample,edtContent, edtKeys;
+    private EditText edtNumber, edtTheme, edtInstruction, edtExample,edtContent, edtAnswer;
     private Button btnAddTeilADetail;
     public ExercisesFragment() {
         // Required empty public constructor
@@ -57,7 +57,7 @@ public class ExercisesFragment extends Fragment implements View.OnClickListener 
         edtInstruction = getActivity().findViewById(R.id.edt_ubungen_instruction);
         edtExample = getActivity().findViewById(R.id.edt_ubungen_example);
         edtContent = getActivity().findViewById(R.id.edt_ubungen_content);
-        edtKeys = getActivity().findViewById(R.id.edt_ubungen_keys);
+        edtAnswer = getActivity().findViewById(R.id.edt_ubungen_answer);
         btnAddTeilADetail = getActivity().findViewById(R.id.btn_add_teila_detail);
         btnAddTeilADetail.setOnClickListener(this);
     }
@@ -66,19 +66,18 @@ public class ExercisesFragment extends Fragment implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_add_teila_detail:
-//            String teilType = "Teil A";
+            String teilType = "Teil A";
             String number = String.valueOf(edtNumber.getText());
             String theme = String.valueOf(edtTheme.getText());
             String instruction = String.valueOf(edtInstruction.getText());
             String example = String.valueOf(edtExample.getText());
             String content = String.valueOf(edtContent.getText());
-            String keys = String.valueOf(edtKeys.getText());
-//            String lessonId = "1";
-//            ItemTeilADetails itemTeilADetails = new ItemTeilADetails(teilType, number, theme, instruction, example, content, keys, lessonId);
-                ItemTeilADetails itemTeilADetails = new ItemTeilADetails( number, theme, instruction, example, content, keys);
+            String answer = String.valueOf(edtAnswer.getText());
+            String lessonId = "1";
+            ItemTeilADetails itemTeilADetails = new ItemTeilADetails(teilType, number, theme, instruction, example, content, answer, lessonId);
 
             databaseReference = database.getReference("NEW_TEILA_UBUNGEN").push();
-            String id = databaseReference.getKey();
+            int id = Integer.parseInt(databaseReference.getKey());
             itemTeilADetails.setId(id);
             databaseReference.setValue(itemTeilADetails, new DatabaseReference.CompletionListener() {
                 @Override
