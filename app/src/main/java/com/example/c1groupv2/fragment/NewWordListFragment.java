@@ -14,7 +14,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.c1groupv2.R;
@@ -82,7 +81,6 @@ public class NewWordListFragment extends Fragment {
                 for (DataSnapshot child : snapshot.getChildren()) {
                     // Extract a Message object from the DataSnapshot
                     ItemNewWord newWord = child.getValue(ItemNewWord.class);
-                    String germanWord = newWord.getGermanWord();
                     wordArrayList.add(newWord);
                     newWordAdapter.notifyDataSetChanged();
                 }
@@ -158,8 +156,7 @@ public class NewWordListFragment extends Fragment {
         });
     }
     private void deleteWord(int position){
-        Toast.makeText(getContext(), "Deleted", Toast.LENGTH_LONG).show();
-        database.getReference("NEW_WORDS").child(wordArrayList.get(position).getId()).removeValue(new DatabaseReference.CompletionListener() {
+                database.getReference("NEW_WORDS").child(wordArrayList.get(position).getId()).removeValue(new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                 if (error == null){

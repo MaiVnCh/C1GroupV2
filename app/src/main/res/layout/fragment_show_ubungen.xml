@@ -107,7 +107,7 @@
                 android:paddingLeft="@dimen/padding"
                 android:paddingRight="@dimen/padding"
                 android:paddingBottom="@dimen/padding_small"
-                android:hint="No answer"
+                android:hint="No keys available."
                 android:textSize="@dimen/textsize"
                 android:textStyle="italic"
                 android:textColor="@color/error"

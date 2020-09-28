@@ -32,7 +32,7 @@
         android:layout_height="wrap_content">
         <Button
             android:id="@+id/btn_lesson1"
-            android:text="Lesson 1"
+            android:text="Kapitel 1 - Reden wir mal übers Wetter"
             android:layout_marginTop="@dimen/padding"
             android:textColor="@android:color/white"
             android:textSize="@dimen/textsize"
@@ -43,7 +43,7 @@
         <Button
             android:id="@+id/btn_lesson2"
             android:layout_marginTop="@dimen/padding"
-            android:text="Lesson 2"
+            android:text="Kapitel 2 - Glück und andere Gefühle"
             android:textColor="@android:color/white"
             android:textSize="@dimen/textsize"
             android:textAllCaps="false"
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btn_lesson3"
-            android:text="Lesson 3"
+            android:text="Kapitel 3 - Erfolge und Niederlagen"
             android:layout_marginTop="@dimen/padding"
             android:textColor="@android:color/white"
             android:textSize="@dimen/textsize"
@@ -63,7 +63,7 @@
         <Button
             android:id="@+id/btn_lesson4"
             android:layout_marginTop="@dimen/padding"
-            android:text="Lesson 4"
+            android:text="Kapitel 4 - Fortschritt und Umwelt"
             android:textColor="@android:color/white"
             android:textSize="@dimen/textsize"
             android:textAllCaps="false"
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btn_lesson5"
-            android:text="Lesson 5"
+            android:text="Kapitel 5 - Das Reich der Sinne"
             android:layout_marginTop="@dimen/padding"
             android:textColor="@android:color/white"
             android:textSize="@dimen/textsize"
@@ -83,7 +83,7 @@
         <Button
             android:id="@+id/btn_lesson6"
             android:layout_marginTop="@dimen/padding"
-            android:text="Lesson 6"
+            android:text="Kapitel 6 - Geschichte und Politik"
             android:textColor="@android:color/white"
             android:textSize="@dimen/textsize"
             android:textAllCaps="false"
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btn_lesson7"
-            android:text="Lesson 7"
+            android:text="Kapitel 7 - Ton, Bild und Wort"
             android:layout_marginTop="@dimen/padding"
             android:textColor="@android:color/white"
             android:textSize="@dimen/textsize"
@@ -103,7 +103,7 @@
         <Button
             android:id="@+id/btn_lesson8"
             android:layout_marginTop="@dimen/padding"
-            android:text="Lesson 8"
+            android:text="Kapitel 8 - Lebenswege"
             android:textColor="@android:color/white"
             android:textSize="@dimen/textsize"
             android:textAllCaps="false"

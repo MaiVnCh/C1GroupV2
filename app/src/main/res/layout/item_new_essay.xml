@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/ll_ubungen_onclick"
+    android:id="@+id/ll_essay_onclick"
     android:gravity="center"
     android:backgroundTint="@color/surface"
     android:orientation="vertical"
@@ -14,13 +14,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <TextView
-        android:id="@+id/tv_ubungen_number"
+        android:id="@+id/tv_writer_name"
         android:textColor="@android:color/white"
         android:layout_gravity="center"
         android:textSize="16sp"
         android:background="@drawable/shape_corner_radius_blue"
         android:layout_marginLeft="@dimen/padding_small"
-        android:layout_width="60dp"
+        android:layout_width="80dp"
         android:padding="@dimen/padding_small"
         android:layout_height="40dp"/>
     <LinearLayout
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/tv_ubungen_theme"
+            android:id="@+id/tv_essay_theme"
             android:paddingLeft="@dimen/padding"
             android:paddingTop="@dimen/padding_small"
             android:paddingRight="@dimen/padding"
@@ -41,7 +41,7 @@
             />
 
         <TextView
-            android:id="@+id/tv_ubungen_instruction"
+            android:id="@+id/tv_essay_mindmap"
             android:paddingLeft="@dimen/padding"
             android:paddingRight="@dimen/padding"
             android:paddingBottom="@dimen/padding_small"
@@ -57,7 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/tv_ubungen_example"
+            android:id="@+id/tv_essay_introduction"
             android:paddingLeft="@dimen/padding"
             android:paddingRight="@dimen/padding"
             android:paddingBottom="@dimen/padding_small"
@@ -69,7 +69,7 @@
             />
 
         <TextView
-            android:id="@+id/tv_ubungen_content"
+            android:id="@+id/tv_essay_body"
             android:paddingLeft="@dimen/padding"
             android:paddingRight="@dimen/padding"
             android:paddingBottom="@dimen/padding_small"
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             />
         <TextView
-            android:id="@+id/tv_ubungen_answer"
+            android:id="@+id/tv_essay_conclusion"
             android:paddingLeft="@dimen/padding"
             android:paddingRight="@dimen/padding"
             android:paddingBottom="@dimen/padding_small"

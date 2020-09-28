@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.c1groupv2.fragment.AddWordFragment;
-import com.example.c1groupv2.fragment.ExercisesFragment;
+import com.example.c1groupv2.fragment.EssayFragment;
 import com.example.c1groupv2.fragment.NewWordListFragment;
 import com.example.c1groupv2.fragment.QAFragment;
 import com.example.c1groupv2.fragment.BrowseFragment;
@@ -15,7 +15,7 @@ public class NaviAdapter extends FragmentPagerAdapter {
     private BrowseFragment browseFragment;
     private AddWordFragment addWordFragment;
     private NewWordListFragment newWordListFragment;
-    private ExercisesFragment exercisesFragment;
+    private EssayFragment exercisesFragment;
     private QAFragment qaFragment;
 
     private  Fragment [] arrFragment;
@@ -25,7 +25,7 @@ public class NaviAdapter extends FragmentPagerAdapter {
         browseFragment = new BrowseFragment();
         addWordFragment = new AddWordFragment();
         newWordListFragment = new NewWordListFragment();
-        exercisesFragment = new ExercisesFragment();
+        exercisesFragment = new EssayFragment();
         qaFragment = new QAFragment();
         arrFragment = new Fragment[] { browseFragment,addWordFragment,  newWordListFragment, exercisesFragment, qaFragment};
     }

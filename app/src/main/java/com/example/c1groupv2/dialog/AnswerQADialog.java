@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 
 import com.example.c1groupv2.R;
 import com.example.c1groupv2.util.OnClickButtonDialogAnswerQAListener;
-import com.example.c1groupv2.util.OnClickButtonDialogEditWordListener;
 
 public class AnswerQADialog extends Dialog implements View.OnClickListener {
 

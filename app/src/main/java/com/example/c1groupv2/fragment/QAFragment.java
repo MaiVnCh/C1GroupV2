@@ -1,6 +1,5 @@
 package com.example.c1groupv2.fragment;
 
-import android.app.ActionBar;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,26 +8,20 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.c1groupv2.R;
-import com.example.c1groupv2.adapter.NewWordAdapter;
 import com.example.c1groupv2.adapter.QAAdapter;
 import com.example.c1groupv2.dialog.AddQADialog;
 import com.example.c1groupv2.dialog.AnswerQADialog;
-import com.example.c1groupv2.dialog.EditWordDialog;
-import com.example.c1groupv2.model.ItemNewWord;
 import com.example.c1groupv2.model.ItemQA;
 import com.example.c1groupv2.util.OnClickAddQADialogListener;
 import com.example.c1groupv2.util.OnClickButtonDialogAnswerQAListener;
-import com.example.c1groupv2.util.OnClickButtonDialogEditWordListener;
 import com.example.c1groupv2.util.OnItemQAClickListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -46,7 +39,6 @@ public class QAFragment extends Fragment {
     private QAAdapter qaAdapter;
     private AddQADialog addQADialog;
     private ArrayList<ItemQA> qaArrayList = new ArrayList<>();
-    private int positionQA;
     private int positionEditQA;
     private ItemQA itemQA;
     private AnswerQADialog answerQADialog;
@@ -127,8 +119,6 @@ public class QAFragment extends Fragment {
                 String id = String.valueOf(itemQA.getId());
                 String question = String.valueOf(itemQA.getQuestion());
                 String answer = String.valueOf(itemQA.getAnswer());
-
-                Toast.makeText(getContext(), question, Toast.LENGTH_LONG).show();
                 answerQADialog();
                 if (!answerQADialog.isShowing()) {
                     answerQADialog.setQuestion(question);
@@ -146,7 +136,7 @@ public class QAFragment extends Fragment {
         answerQADialog.setOnClickButtonDialogAnswerQAListener(new OnClickButtonDialogAnswerQAListener() {
             @Override
             public void onCancelButtonClick() {
-                Toast.makeText(getContext(), "Answer cancelled.", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Answer cancelled.", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -157,6 +147,7 @@ public class QAFragment extends Fragment {
 
                 databaseReference = database.getReference("NEW_QA").child(qaArrayList.get(positionEditQA).getId());
                 databaseReference.setValue(qaArrayList.get(positionEditQA));
+                Toast.makeText(getContext(), "Answer ok.", Toast.LENGTH_SHORT).show();
                 qaAdapter.notifyDataSetChanged();
 
             }

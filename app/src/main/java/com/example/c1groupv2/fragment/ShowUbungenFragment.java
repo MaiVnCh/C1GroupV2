@@ -51,15 +51,24 @@ public class ShowUbungenFragment extends Fragment implements View.OnClickListene
         edtExample = getActivity().findViewById(R.id.edt_edit_example);
         edtContent = getActivity().findViewById(R.id.edt_edit_content);
         edtAnswer = getActivity().findViewById(R.id.edt_edit_answer);
-//        set text on editext when loading
         teilAFragment = new TeilAFragment();
         if (itemTeilADetails != null) {
             edtNumber.setText(itemTeilADetails.getNumber());
-            edtTheme.setText(itemTeilADetails.getTheme());
-            edtInstruction.setText(itemTeilADetails.getInstruction());
-            edtExample.setText(itemTeilADetails.getExample());
-            edtContent.setText(itemTeilADetails.getContent());
-            edtAnswer.setText(itemTeilADetails.getAnswer());
+            if (itemTeilADetails.getTheme()!=null){
+            edtTheme.setText(itemTeilADetails.getTheme());}
+
+            if (itemTeilADetails.getInstruction()!=null){
+            edtInstruction.setText(itemTeilADetails.getInstruction());}
+
+            if (itemTeilADetails.getExample()!=null){
+            edtExample.setText(itemTeilADetails.getExample());}
+
+            if (itemTeilADetails.getContent()!=null){
+            edtContent.setText(itemTeilADetails.getContent());}
+
+            if (itemTeilADetails.getAnswer()!=null){
+            edtAnswer.setText("Keys: \n" + itemTeilADetails.getAnswer());
+            }
         }
 
         btnBack = getActivity().findViewById(R.id.btn_edit_detail);

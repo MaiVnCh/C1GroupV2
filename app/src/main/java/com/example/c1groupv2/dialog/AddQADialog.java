@@ -7,17 +7,11 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 import com.example.c1groupv2.R;
-import com.example.c1groupv2.model.ItemNewWord;
-import com.example.c1groupv2.model.ItemQA;
 import com.example.c1groupv2.util.OnClickAddQADialogListener;
-import com.example.c1groupv2.util.OnClickButtonDialogEditWordListener;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 

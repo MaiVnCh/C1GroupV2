@@ -60,9 +60,47 @@ public class BrowseFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_lesson1:
-                Intent intentLesson = new Intent(getContext(), LessonActivity.class);
-                startActivity(intentLesson);
+                Intent intentLesson1 = new Intent(getContext(), LessonActivity.class);
+                intentLesson1.putExtra("LessonId", 1);
+                startActivity(intentLesson1);
             break;
+            case R.id.btn_lesson2:
+                Intent intentLesson2 = new Intent(getContext(), LessonActivity.class);
+                intentLesson2.putExtra("LessonId", 2);
+                startActivity(intentLesson2);
+                break;
+            case R.id.btn_lesson3:
+                Intent intentLesson3 = new Intent(getContext(), LessonActivity.class);
+                intentLesson3.putExtra("LessonId", 3);
+                startActivity(intentLesson3);
+                break;
+            case R.id.btn_lesson4:
+                Intent intentLesson4 = new Intent(getContext(), LessonActivity.class);
+                intentLesson4.putExtra("LessonId", 4);
+                startActivity(intentLesson4);
+                break;
+            case R.id.btn_lesson5:
+                Intent intentLesson5 = new Intent(getContext(), LessonActivity.class);
+                intentLesson5.putExtra("LessonId", 5);
+                startActivity(intentLesson5);
+                break;
+
+            case R.id.btn_lesson6:
+                Intent intentLesson6 = new Intent(getContext(), LessonActivity.class);
+                intentLesson6.putExtra("LessonId", 6);
+                startActivity(intentLesson6);
+                break;
+            case R.id.btn_lesson7:
+                Intent intentLesson7 = new Intent(getContext(), LessonActivity.class);
+                intentLesson7.putExtra("LessonId", 7);
+                startActivity(intentLesson7);
+                break;
+            case R.id.btn_lesson8:
+                Intent intentLesson8 = new Intent(getContext(), LessonActivity.class);
+                intentLesson8.putExtra("LessonId", 8);
+                startActivity(intentLesson8);
+                break;
+
         }
     }
 }

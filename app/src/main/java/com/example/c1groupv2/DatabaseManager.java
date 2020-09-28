@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class DatabaseManager {
 
-    private static final String DB_NAME = "C1GroupV2.db";
+    private static final String DB_NAME = "C1GroupV2Sept23.db";
     private static final String PATH_DB = Environment.getDataDirectory().getPath() + "/data/com.example.c1groupv2/database/" + DB_NAME;
     private static final String TAGG = DatabaseManager.class.getSimpleName();
     private Context context;
@@ -83,10 +83,37 @@ public class DatabaseManager {
     }
 
 
+    public ArrayList<ItemTeilADetails> getAllUbungen( String teil, int lesson){
+        ArrayList<ItemTeilADetails> aDetailsArrayList = new ArrayList<>();
+        openDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM UbungenTeilALesson1 WHERE TeilType = ? AND LessonId = ?", new String[] {teil, String.valueOf(lesson)});
+        if (cursor!=null){
+            cursor.moveToFirst();
+            while (cursor.isAfterLast() == false){
+                int idUbung = cursor.getInt(cursor.getColumnIndex("Id"));
+                String teilType = cursor.getString(cursor.getColumnIndex("TeilType"));
+                String number = cursor.getString(cursor.getColumnIndex("Number"));
+                String theme = cursor.getString(cursor.getColumnIndex("Theme"));
+                String instruction = cursor.getString(cursor.getColumnIndex("Instruction"));
+                String example = cursor.getString(cursor.getColumnIndex("Example"));
+                String content = cursor.getString(cursor.getColumnIndex("Content"));
+                String answer = cursor.getString(cursor.getColumnIndex("Answer"));
+                String lessonId = cursor.getString(cursor.getColumnIndex("LessonId"));
+
+
+                ItemTeilADetails itemTeilADetails = new ItemTeilADetails(idUbung,teilType, number,theme, instruction, example,content,answer,lessonId);
+                aDetailsArrayList.add(itemTeilADetails);
+                cursor.moveToNext();
+            }
+            return aDetailsArrayList;
+        }
+        return null;
+    }
+
     public ArrayList<ItemTeilADetails> getAllUbungenA(){
         ArrayList<ItemTeilADetails> aDetailsArrayList = new ArrayList<>();
         openDatabase();
-        String sqlQuery = "SELECT * FROM UbungenTeilALesson1";
+        String sqlQuery = "SELECT * FROM UbungenTeilALesson1 WHERE TeilType = 'Teil A' ";
         Cursor cursor = sqLiteDatabase.rawQuery(sqlQuery, null);
         if (cursor!=null){
             cursor.moveToFirst();
@@ -111,5 +138,60 @@ public class DatabaseManager {
         return null;
     }
 
+
+    public ArrayList<ItemTeilADetails> getAllUbungenC(){
+        ArrayList<ItemTeilADetails> aDetailsArrayList = new ArrayList<>();
+        openDatabase();
+        String sqlQuery = "SELECT * FROM UbungenTeilALesson1 WHERE TeilType = 'Teil C' ";
+        Cursor cursor = sqLiteDatabase.rawQuery(sqlQuery, null);
+        if (cursor!=null){
+            cursor.moveToFirst();
+            while (cursor.isAfterLast() == false){
+                int idUbung = cursor.getInt(cursor.getColumnIndex("Id"));
+                String teilType = cursor.getString(cursor.getColumnIndex("TeilType"));
+                String number = cursor.getString(cursor.getColumnIndex("Number"));
+                String theme = cursor.getString(cursor.getColumnIndex("Theme"));
+                String instruction = cursor.getString(cursor.getColumnIndex("Instruction"));
+                String example = cursor.getString(cursor.getColumnIndex("Example"));
+                String content = cursor.getString(cursor.getColumnIndex("Content"));
+                String answer = cursor.getString(cursor.getColumnIndex("Answer"));
+                String lessonId = cursor.getString(cursor.getColumnIndex("LessonId"));
+
+
+                ItemTeilADetails itemTeilADetails = new ItemTeilADetails(idUbung,teilType, number,theme, instruction, example,content,answer,lessonId);
+                aDetailsArrayList.add(itemTeilADetails);
+                cursor.moveToNext();
+            }
+            return aDetailsArrayList;
+        }
+        return null;
+    }
+    public ArrayList<ItemTeilADetails> getAllUbungenD(){
+        ArrayList<ItemTeilADetails> aDetailsArrayList = new ArrayList<>();
+        openDatabase();
+        String sqlQuery = "SELECT * FROM UbungenTeilALesson1 WHERE TeilType = 'Teil D' ";
+        Cursor cursor = sqLiteDatabase.rawQuery(sqlQuery, null);
+        if (cursor!=null){
+            cursor.moveToFirst();
+            while (cursor.isAfterLast() == false){
+                int idUbung = cursor.getInt(cursor.getColumnIndex("Id"));
+                String teilType = cursor.getString(cursor.getColumnIndex("TeilType"));
+                String number = cursor.getString(cursor.getColumnIndex("Number"));
+                String theme = cursor.getString(cursor.getColumnIndex("Theme"));
+                String instruction = cursor.getString(cursor.getColumnIndex("Instruction"));
+                String example = cursor.getString(cursor.getColumnIndex("Example"));
+                String content = cursor.getString(cursor.getColumnIndex("Content"));
+                String answer = cursor.getString(cursor.getColumnIndex("Answer"));
+                String lessonId = cursor.getString(cursor.getColumnIndex("LessonId"));
+
+
+                ItemTeilADetails itemTeilADetails = new ItemTeilADetails(idUbung,teilType, number,theme, instruction, example,content,answer,lessonId);
+                aDetailsArrayList.add(itemTeilADetails);
+                cursor.moveToNext();
+            }
+            return aDetailsArrayList;
+        }
+        return null;
+    }
 
 }

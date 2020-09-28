@@ -9,8 +9,8 @@
         android:layout_height="wrap_content">
         <TextView
             android:paddingLeft="@dimen/padding"
-            android:id="@+id/tv_exercises_number"
-            android:text="Exercise A.3"
+            android:id="@+id/tv_essay_number"
+            android:hint="No."
             android:textSize="@dimen/textheading"
             android:textStyle="bold"
             android:layout_width="wrap_content"
@@ -19,17 +19,18 @@
         <TextView
         android:paddingTop="@dimen/padding"
         android:paddingLeft="@dimen/padding"
-        android:id="@+id/tv_date"
-        android:text="Date: 20/8/20"
+        android:id="@+id/tv_essay_theme"
+        android:hint="Theme"
+        android:textAllCaps="true"
         android:textSize="@dimen/textsize"
-        android:textStyle="italic"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     </LinearLayout>
     <TextView
         android:paddingLeft="@dimen/padding"
-        android:id="@+id/tv_instruction"
-        android:text="Erganzen Sie..."
+        android:id="@+id/tv_essay_instruction"
+        android:text="Introduction"
         android:textSize="@dimen/textsize"
         android:textStyle="italic"
         android:layout_width="match_parent"
@@ -37,16 +38,16 @@
 
     <TextView
         android:paddingLeft="@dimen/padding"
-        android:id="@+id/tv_content"
-        android:text="Hier können Sie herausfinden, wie gut Ihr Deutsch ist: Stehen Sie am Anfang, sind Sie fortgeschritten oder schon Profi? Dieser Test gibt Ihnen eine erste Orientierung, wie gut Sie schriftliche und mündliche deutsche Texte verstehen und wie gut Ihre Grammatik- und Wortschatzkenntnisse schon sind."
+        android:id="@+id/tv_essay_tips"
+        android:hint="Tip 1. ......... Tip 2............."
         android:textColor="@color/colorSecondaryDark"
         android:textSize="@dimen/textheading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <TextView
         android:paddingLeft="@dimen/padding"
-        android:id="@+id/tv_key"
-        android:text="Erganzen Sie..."
+        android:id="@+id/tv_essay_conclusion"
+        android:hint="Conclusion"
         android:textSize="@dimen/textsize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

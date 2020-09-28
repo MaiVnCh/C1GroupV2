@@ -11,9 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.c1groupv2.R;
-import com.example.c1groupv2.model.ItemQA;
 import com.example.c1groupv2.model.ItemTeilADetails;
-import com.example.c1groupv2.util.OnItemQAClickListener;
 import com.example.c1groupv2.util.OnItemTeilADetailClickListener;
 
 import java.util.ArrayList;
@@ -48,11 +46,18 @@ public class TeilADetailsAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         ItemTeilADetails itemTeilADetails = aDetailsArrayList.get(position);
         ViewHolder viewHolder = (ViewHolder) holder;
         viewHolder.tvNumber.setText(itemTeilADetails.getNumber());
-        viewHolder.tvTheme.setText(itemTeilADetails.getTheme());
-        viewHolder.tvInstruction.setText(itemTeilADetails.getInstruction());
-        viewHolder.tvExample.setText(itemTeilADetails.getExample());
-        viewHolder.tvContent.setText(itemTeilADetails.getContent());
-        viewHolder.tvAnswer.setText(itemTeilADetails.getAnswer());
+
+        if (itemTeilADetails.getTheme()!=null){
+        viewHolder.tvTheme.setText(itemTeilADetails.getTheme());}
+
+        if (itemTeilADetails.getInstruction()!=null){
+        viewHolder.tvInstruction.setText(itemTeilADetails.getInstruction());}
+
+        if (itemTeilADetails.getExample()!=null){
+            viewHolder.tvExample.setText(itemTeilADetails.getExample());}
+        if (itemTeilADetails.getContent()!=null){
+            viewHolder.tvContent.setText(itemTeilADetails.getContent() + "\n\n(Click for keys)");}
+//        viewHolder.tvAnswer.setText(itemTeilADetails.getAnswer());
     }
 
 
@@ -72,7 +77,7 @@ public class TeilADetailsAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             tvInstruction = itemView.findViewById(R.id.tv_ubungen_instruction);
             tvExample = itemView.findViewById(R.id.tv_ubungen_example);
             tvContent = itemView.findViewById(R.id.tv_ubungen_content);
-            tvAnswer = itemView.findViewById(R.id.tv_ubungen_answer);
+//            tvAnswer = itemView.findViewById(R.id.tv_ubungen_answer);
 
             llOnClick = itemView.findViewById(R.id.ll_ubungen_onclick);
             llOnClick.setOnClickListener(this);
