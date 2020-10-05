@@ -35,7 +35,7 @@ public class EditWordDialog extends Dialog implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setCancelable(false);
+//        setCancelable(false);
         setContentView(R.layout.dialog_edit_word);
         getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         initViews();

@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class DatabaseManager {
 
-    private static final String DB_NAME = "C1GroupV2Sept23.db";
+    private static final String DB_NAME = "C1GroupV2Sept30.db";
     private static final String PATH_DB = Environment.getDataDirectory().getPath() + "/data/com.example.c1groupv2/database/" + DB_NAME;
     private static final String TAGG = DatabaseManager.class.getSimpleName();
     private Context context;

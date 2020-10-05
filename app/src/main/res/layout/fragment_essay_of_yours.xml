@@ -12,7 +12,9 @@
                 android:layout_height="wrap_content">
                         <TextView
                             android:text="Your Essay/Writing"
-                            android:padding="@dimen/padding"
+                            android:paddingTop="@dimen/paddinglarge"
+                            android:paddingLeft="@dimen/paddinglarge"
+                            android:paddingBottom="@dimen/padding_small"
                             android:textColor="@color/error"
                             android:textSize="@dimen/textheading"
                             android:textStyle="bold"

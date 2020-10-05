@@ -11,8 +11,8 @@
 
     <TextView
         android:text="Your Essays/Writing:"
-        android:paddingTop="@dimen/padding"
-        android:paddingLeft="@dimen/padding"
+        android:paddingTop="@dimen/paddingmedium"
+        android:paddingLeft="@dimen/paddingmedium"
         android:textColor="@color/error"
         android:textSize="@dimen/textheading"
         android:textStyle="bold"

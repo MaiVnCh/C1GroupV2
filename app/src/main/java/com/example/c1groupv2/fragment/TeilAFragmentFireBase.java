@@ -25,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 
-public class TeilAFragment extends Fragment{
+public class TeilAFragmentFireBase extends Fragment{
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
 
@@ -35,7 +35,7 @@ public class TeilAFragment extends Fragment{
 
     private ShowUbungenFragment showUbungenFragment = new ShowUbungenFragment();
 
-    public TeilAFragment() {
+    public TeilAFragmentFireBase() {
         // Required empty public constructor
     }
 

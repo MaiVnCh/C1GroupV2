@@ -44,7 +44,7 @@ public class EssayActivity extends AppCompatActivity {
 //                .add(R.id.container_essay_activity, essayOfYoursFragment)
 //                .commit();
         database = FirebaseDatabase.getInstance();
-        getNewExercies();
+        getNewEssays();
         initViews();
 
 
@@ -67,8 +67,8 @@ public class EssayActivity extends AppCompatActivity {
         });
     }
 
-    private void getNewExercies() {
-        database.getReference("NEW_EXERCISES").addValueEventListener(new ValueEventListener() {
+    private void getNewEssays() {
+        database.getReference("YOUR_ESSAYS").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 essayArrayList.clear();

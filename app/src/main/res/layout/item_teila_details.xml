@@ -17,23 +17,24 @@
         android:id="@+id/tv_ubungen_number"
         android:textColor="@android:color/white"
         android:layout_gravity="center"
-        android:textSize="16sp"
+        android:textSize="@dimen/textheading"
         android:background="@drawable/shape_corner_radius_blue"
         android:layout_marginLeft="@dimen/padding_small"
-        android:layout_width="60dp"
-        android:padding="@dimen/padding_small"
-        android:layout_height="40dp"/>
+        android:layout_width="wrap_content"
+        android:padding="@dimen/paddingmedium"
+        android:layout_height="@dimen/small"/>
     <LinearLayout
         android:orientation="vertical"
-        android:layout_marginRight="@dimen/padding"
+        android:layout_marginRight="@dimen/paddingmedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/tv_ubungen_theme"
-            android:paddingLeft="@dimen/padding"
+            android:paddingLeft="@dimen/paddinglarge"
             android:paddingTop="@dimen/padding_small"
-            android:paddingRight="@dimen/padding"
+            android:paddingRight="@dimen/paddingmedium"
             android:textStyle="bold"
+            android:layout_marginBottom="@dimen/padding_small"
             android:textColor="@color/colorText"
             android:textSize="@dimen/textsize"
             android:layout_width="match_parent"
@@ -42,8 +43,8 @@
 
         <TextView
             android:id="@+id/tv_ubungen_instruction"
-            android:paddingLeft="@dimen/padding"
-            android:paddingRight="@dimen/padding"
+            android:paddingLeft="@dimen/paddinglarge"
+            android:paddingRight="@dimen/paddingmedium"
             android:paddingBottom="@dimen/padding_small"
             android:textSize="@dimen/textsize"
             android:textColor="@color/colorText"
@@ -58,8 +59,8 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/tv_ubungen_example"
-            android:paddingLeft="@dimen/padding"
-            android:paddingRight="@dimen/padding"
+            android:paddingLeft="@dimen/paddinglarge"
+            android:paddingRight="@dimen/paddingmedium"
             android:paddingBottom="@dimen/padding_small"
             android:textSize="@dimen/textsize"
             android:textStyle="italic"
@@ -70,8 +71,8 @@
 
         <TextView
             android:id="@+id/tv_ubungen_content"
-            android:paddingLeft="@dimen/padding"
-            android:paddingRight="@dimen/padding"
+            android:paddingLeft="@dimen/paddinglarge"
+            android:paddingRight="@dimen/paddingmedium"
             android:paddingBottom="@dimen/padding_small"
             android:textSize="@dimen/textsize"
             android:textColor="@color/colorText"
@@ -80,8 +81,8 @@
             />
         <TextView
             android:id="@+id/tv_ubungen_answer"
-            android:paddingLeft="@dimen/padding"
-            android:paddingRight="@dimen/padding"
+            android:paddingLeft="@dimen/paddinglarge"
+            android:paddingRight="@dimen/paddingmedium"
             android:paddingBottom="@dimen/padding_small"
             android:textSize="@dimen/textsize"
             android:textStyle="italic"

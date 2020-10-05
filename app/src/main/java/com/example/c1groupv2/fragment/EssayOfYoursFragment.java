@@ -47,7 +47,7 @@ public class EssayOfYoursFragment extends Fragment  {
         View view =  inflater.inflate(R.layout.fragment_essay, container, false);
 
         database = FirebaseDatabase.getInstance();
-        getNewExercies();
+        getNewEssays();
 
         rcNewEssays =view.findViewById(R.id.rc_new_essays);
 
@@ -62,8 +62,8 @@ public class EssayOfYoursFragment extends Fragment  {
         return view;
     }
 
-    private void getNewExercies() {
-        database.getReference("NEW_EXERCISES").addValueEventListener(new ValueEventListener() {
+    private void getNewEssays() {
+        database.getReference("YOUR_ESSAYS").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 essayArrayList.clear();

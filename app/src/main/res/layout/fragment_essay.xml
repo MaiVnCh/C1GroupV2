@@ -27,7 +27,9 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="Essay Writing Tips"
-                        android:padding="@dimen/padding"
+                        android:paddingTop="@dimen/paddingmedium"
+                        android:paddingLeft="@dimen/paddinglarge"
+                        android:paddingBottom="@dimen/padding_small"
                         android:textColor="@color/error"
                         android:textSize="@dimen/textheading"
                         android:textStyle="bold"
@@ -36,7 +38,7 @@
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:id="@+id/fab_add_writing_tip"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="@dimen/padding"
+                        android:layout_marginRight="@dimen/paddinglarge"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end|bottom"
@@ -46,7 +48,7 @@
                 </RelativeLayout>
                 <View
                     android:background="@color/colorPrimary"
-                    android:layout_width="220dp"
+                    android:layout_width="@dimen/xlarge"
                     android:layout_height="2dp"/>
 <ScrollView
     android:layout_width="match_parent"
@@ -57,7 +59,7 @@
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/vp_essay_tips"
                     android:layout_width="match_parent"
-                    android:layout_height="600dp"/>
+                    android:layout_height="400dp"/>
     </LinearLayout>
 </ScrollView>
                     <View
@@ -76,7 +78,9 @@
                 android:layout_height="wrap_content">
                 <TextView
                     android:text="Add an Essay/Writing"
-                    android:padding="@dimen/padding"
+                    android:paddingTop="@dimen/paddinglarge"
+                    android:paddingLeft="@dimen/paddinglarge"
+                    android:paddingBottom="@dimen/padding_small"
                     android:textColor="@color/error"
                     android:textSize="@dimen/textheading"
                     android:textStyle="bold"
@@ -85,7 +89,7 @@
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/fab_your_essays"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="@dimen/padding"
+                    android:layout_marginRight="@dimen/paddinglarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end|bottom"
@@ -100,26 +104,27 @@
                     android:layout_height="wrap_content">
                     <EditText
                         android:id="@+id/edt_your_name"
-                        android:hint="Name?"
+                        android:text="Name?"
+                        android:paddingLeft="@dimen/paddingmedium"
                         android:textColor="@android:color/white"
                         android:layout_gravity="center"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/textsize"
                         android:background="@drawable/shape_corner_radius_blue"
                         android:layout_marginLeft="@dimen/padding_small"
-                        android:layout_width="100dp"
-                        android:padding="@dimen/padding_small"
-                        android:layout_height="40dp"/>
+                        android:layout_width="@dimen/medium"
+                        android:padding="@dimen/paddingmedium"
+                        android:layout_height="@dimen/small"/>
                     <LinearLayout
                         android:orientation="vertical"
-                        android:layout_marginRight="@dimen/padding"
+                        android:layout_marginRight="@dimen/paddinglarge"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <EditText
                             android:id="@+id/edt_essay_theme"
-                            android:paddingLeft="@dimen/padding"
+                            android:paddingLeft="@dimen/paddingmedium"
                             android:paddingTop="@dimen/padding_small"
                             android:hint="Theme?"
-                            android:paddingRight="@dimen/padding"
+                            android:paddingRight="@dimen/paddingmedium"
                             android:textStyle="bold"
                             android:textColor="@color/colorText"
                             android:textSize="@dimen/textsize"
@@ -128,9 +133,8 @@
 
                         <EditText
                             android:id="@+id/edt_essay_mindmap"
-                            android:paddingLeft="@dimen/padding"
-                            android:paddingRight="@dimen/padding"
-                            android:paddingBottom="@dimen/padding_small"
+                            android:paddingLeft="@dimen/paddingmedium"
+                            android:paddingRight="@dimen/paddingmedium"
                             android:hint="Mindmap?"
                             android:textSize="@dimen/textsize"
                             android:textColor="@color/colorText"
@@ -144,9 +148,8 @@
                 android:layout_height="wrap_content">
                     <EditText
                         android:id="@+id/edt_essay_introduction"
-                        android:paddingLeft="@dimen/padding"
-                        android:paddingRight="@dimen/padding"
-                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingLeft="@dimen/paddingmedium"
+                        android:paddingRight="@dimen/paddingmedium"
                         android:hint="Introduction"
                         android:textSize="@dimen/textsize"
                         android:textStyle="italic"
@@ -156,9 +159,8 @@
 
                     <EditText
                         android:id="@+id/edt_essay_body"
-                        android:paddingLeft="@dimen/padding"
-                        android:paddingRight="@dimen/padding"
-                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingLeft="@dimen/paddingmedium"
+                        android:paddingRight="@dimen/paddingmedium"
                         android:hint="Body"
                         android:textSize="@dimen/textsize"
                         android:textColor="@color/colorText"
@@ -166,9 +168,8 @@
                         android:layout_height="wrap_content"/>
                     <EditText
                         android:id="@+id/edt_essay_conclusion"
-                        android:paddingLeft="@dimen/padding"
-                        android:paddingRight="@dimen/padding"
-                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingLeft="@dimen/paddingmedium"
+                        android:paddingRight="@dimen/paddingmedium"
                         android:hint="Conclusion"
                         android:textSize="@dimen/textsize"
                         android:textStyle="italic"
@@ -188,7 +189,7 @@
                     android:background="@drawable/shape_corner_radius_grey"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_gravity="center"
-                    android:layout_marginRight="@dimen/padding"
+                    android:layout_marginLeft="@dimen/small"
                     android:textAllCaps="false"
                     android:textColor="@android:color/white"
                     android:soundEffectsEnabled="true"
@@ -201,6 +202,8 @@
                     android:layout_margin="@dimen/padding_small"
                     android:layout_gravity="center"
                     android:textAllCaps="false"
+                    android:layout_marginRight="@dimen/small"
+                    android:layout_marginLeft="@dimen/small"
                     android:textColor="@android:color/white"
                     android:soundEffectsEnabled="true"
                     android:layout_width="wrap_content"

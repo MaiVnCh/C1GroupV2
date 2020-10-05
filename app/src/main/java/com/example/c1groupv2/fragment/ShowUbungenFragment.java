@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +19,6 @@ import com.example.c1groupv2.R;
 import com.example.c1groupv2.model.ItemTeilADetails;
 
 public class ShowUbungenFragment extends Fragment implements View.OnClickListener {
-    private TeilAFragment teilAFragment;
 
     private TextView edtNumber, edtTheme, edtInstruction, edtExample, edtContent, edtAnswer;
     private ItemTeilADetails itemTeilADetails;
@@ -51,7 +51,6 @@ public class ShowUbungenFragment extends Fragment implements View.OnClickListene
         edtExample = getActivity().findViewById(R.id.edt_edit_example);
         edtContent = getActivity().findViewById(R.id.edt_edit_content);
         edtAnswer = getActivity().findViewById(R.id.edt_edit_answer);
-        teilAFragment = new TeilAFragment();
         if (itemTeilADetails != null) {
             edtNumber.setText(itemTeilADetails.getNumber());
             if (itemTeilADetails.getTheme()!=null){
@@ -70,7 +69,6 @@ public class ShowUbungenFragment extends Fragment implements View.OnClickListene
             edtAnswer.setText("Keys: \n" + itemTeilADetails.getAnswer());
             }
         }
-
         btnBack = getActivity().findViewById(R.id.btn_edit_detail);
         btnBack.setOnClickListener(this);
     }
@@ -80,18 +78,11 @@ public class ShowUbungenFragment extends Fragment implements View.OnClickListene
         switch (v.getId()) {
             case R.id.btn_edit_detail:
                 getFragmentManager().popBackStack();
-//                getFragmentManager().beginTransaction()
-//                        .replace(R.id.lesson_activity_container, teilAFragment)
-//                        .addToBackStack(null)
-//                        .commit();
-
-                    break;
+                   break;
                 }
         }
 
     public void setItemTeilADetails(ItemTeilADetails itemTeilADetails) {
         this.itemTeilADetails = itemTeilADetails;
     }
-
-
 }

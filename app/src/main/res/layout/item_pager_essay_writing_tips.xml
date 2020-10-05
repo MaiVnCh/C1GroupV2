@@ -8,47 +8,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:paddingLeft="@dimen/padding"
+            android:paddingLeft="@dimen/paddingmedium"
             android:id="@+id/tv_essay_number"
             android:hint="No."
-            android:textSize="@dimen/textheading"
+            android:textSize="@dimen/textsize"
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <TextView
-        android:paddingTop="@dimen/padding"
-        android:paddingLeft="@dimen/padding"
+        android:paddingTop="@dimen/paddinglarge"
+        android:paddingLeft="@dimen/paddingmedium"
         android:id="@+id/tv_essay_theme"
         android:hint="Theme"
-        android:textAllCaps="true"
         android:textSize="@dimen/textsize"
+        android:textAllCaps="true"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     </LinearLayout>
     <TextView
-        android:paddingLeft="@dimen/padding"
+        android:paddingLeft="@dimen/paddingmedium"
         android:id="@+id/tv_essay_instruction"
         android:text="Introduction"
-        android:textSize="@dimen/textsize"
         android:textStyle="italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:paddingLeft="@dimen/padding"
+        android:paddingLeft="@dimen/paddingmedium"
         android:id="@+id/tv_essay_tips"
         android:hint="Tip 1. ......... Tip 2............."
         android:textColor="@color/colorSecondaryDark"
-        android:textSize="@dimen/textheading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <TextView
-        android:paddingLeft="@dimen/padding"
+        android:paddingLeft="@dimen/paddingmedium"
         android:id="@+id/tv_essay_conclusion"
         android:hint="Conclusion"
-        android:textSize="@dimen/textsize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

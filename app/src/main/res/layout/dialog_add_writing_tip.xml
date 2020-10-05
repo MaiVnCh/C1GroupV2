@@ -1,22 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_marginTop="@dimen/paddinglarge"
         android:orientation="vertical"
         android:background="@drawable/bg_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
         <TextView
             android:background="@drawable/bg_image_dialog"
             android:layout_weight="1"
-            android:text="Please add your writing tips"
+            android:layout_gravity="center"
+            android:text="Please add your writing tips."
             android:textColor="@android:color/white"
-            android:textAppearance="@android:anim/slide_in_left"
             android:textStyle="bold"
             android:textSize="@dimen/textheading"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="0dp"/>
+    <LinearLayout
+        android:layout_marginTop="@dimen/paddinglarge"
+        android:paddingRight="@dimen/paddinglarge"
+        android:paddingLeft="@dimen/paddinglarge"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_cancel_dialog_writing_tip"
+            android:background="@drawable/bg_button_cancel"
+            android:textAllCaps="false"
+            android:text="Cancel"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="@dimen/padding_small"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textSize="@dimen/textsize"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_ok_dialog_writing_tip"
+            android:background="@drawable/bg_button_ok"
+            android:layout_marginLeft="@dimen/small"
+            android:textAllCaps="false"
+            android:text="Ok"
+            android:layout_marginBottom="@dimen/padding_small"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textSize="@dimen/textsize"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
@@ -26,8 +66,9 @@
 
             <EditText
                 android:id="@+id/edt_add_tip_number"
-                android:textAppearance="?android:textAppearanceLarge"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="@dimen/paddingmedium"
+                android:layout_marginRight="@dimen/paddinglarge"
+                android:layout_marginLeft="@dimen/paddinglarge"
                 android:hint="Add tip number"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -35,8 +76,9 @@
                 android:layout_height="wrap_content"/>
             <EditText
                 android:id="@+id/edt_add_writing_theme"
-                android:textAppearance="?android:textAppearanceLarge"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="@dimen/paddingmedium"
+                android:layout_marginRight="@dimen/paddinglarge"
+                android:layout_marginLeft="@dimen/paddinglarge"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:hint="Add writing theme"
@@ -44,8 +86,9 @@
                 android:layout_height="wrap_content"/>
             <EditText
                 android:id="@+id/edt_add_tip_introduction"
-                android:textAppearance="?android:textAppearanceLarge"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="@dimen/paddingmedium"
+                android:layout_marginRight="@dimen/paddinglarge"
+                android:layout_marginLeft="@dimen/paddinglarge"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:hint="Add your tip introduction"
@@ -53,8 +96,9 @@
                 android:layout_height="wrap_content"/>
             <EditText
                 android:id="@+id/edt_add_tip_content"
-                android:textAppearance="?android:textAppearanceLarge"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="@dimen/paddingmedium"
+                android:layout_marginRight="@dimen/paddinglarge"
+                android:layout_marginLeft="@dimen/paddinglarge"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:hint="Add your tip content"
@@ -62,47 +106,20 @@
                 android:layout_height="wrap_content"/>
             <EditText
                 android:id="@+id/edt_add_tip_conclusion"
-                android:textAppearance="?android:textAppearanceLarge"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="@dimen/paddingmedium"
+                android:layout_marginRight="@dimen/paddinglarge"
+                android:layout_marginLeft="@dimen/paddinglarge"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:hint="Add your tip conclusion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-
-
             <View
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"/>
-
-            <LinearLayout
-                android:layout_marginBottom="30dp"
-                android:paddingRight="15dp"
-                android:paddingLeft="15dp"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="@dimen/paddinglarge"/>
 
-                <Button
-                    android:id="@+id/btn_cancel_dialog_writing_tip"
-                    android:background="@drawable/bg_button_cancel"
-                    android:textAllCaps="false"
-                    android:text="Cancel"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"/>
-                <Button
-                    android:id="@+id/btn_ok_dialog_writing_tip"
-                    android:background="@drawable/bg_button_ok"
-                    android:layout_marginLeft="25dp"
-                    android:textAllCaps="false"
-                    android:text="Ok"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"/>
 
-            </LinearLayout>
         </LinearLayout>
-        
-    </LinearLayout>
+</LinearLayout>
+</ScrollView>
+</LinearLayout>

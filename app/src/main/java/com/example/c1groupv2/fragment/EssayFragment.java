@@ -145,7 +145,7 @@ public class EssayFragment extends Fragment implements View.OnClickListener {
         addWritingTipDialog.setOnClickAddWritingTipDialogListener(new OnClickAddWritingTipDialogListener() {
             @Override
             public void onCancelButtonClick() {
-                Toast.makeText(getContext(), "Cancelled", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Cancelled", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -159,9 +159,9 @@ public class EssayFragment extends Fragment implements View.OnClickListener {
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                         if (error == null) {
-                            Toast.makeText(getContext(), "Added question successfully.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getContext(), "Added successfully.", Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(getContext(), "Added question unsuccessfully, " + error.getMessage(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(getContext(), "Added unsuccessfully, " + error.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -187,16 +187,16 @@ public class EssayFragment extends Fragment implements View.OnClickListener {
 
             ItemNewEssay itemNewEssay = new ItemNewEssay(teilType, name, theme, mindmap, introduction, body,conclusion, lessonID);
 
-            databaseReference = database.getReference("NEW_EXERCISES").push();
+            databaseReference = database.getReference("YOUR_ESSAYS").push();
             String id = databaseReference.getKey();
             itemNewEssay.setId(id);
             databaseReference.setValue(itemNewEssay, new DatabaseReference.CompletionListener() {
                 @Override
                 public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                     if (error == null) {
-                        Toast.makeText(getActivity(), "Added successfully.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), "Added successfully.", Toast.LENGTH_SHORT).show();
                     } else {
-                        Toast.makeText(getActivity(), "Added unsuccessfully, " + error.getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), "Added unsuccessfully, " + error.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
             });

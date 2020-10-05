@@ -10,14 +10,16 @@
         android:layout_height="match_parent">
         <TextView
             android:text="Question - Answer"
-            android:paddingLeft="@dimen/padding"
+            android:paddingTop="@dimen/paddinglarge"
+            android:paddingLeft="@dimen/paddinglarge"
+            android:paddingBottom="@dimen/padding_small"
             android:textColor="@color/colorText"
             android:textSize="@dimen/textheading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <View
             android:background="@color/colorPrimary"
-            android:layout_width="180dp"
+            android:layout_width="@dimen/xlarge"
             android:layout_height="2dp"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -25,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
-            android:src="@drawable/ic_plus"
+            android:src="@drawable/ic_plus_white"
             android:contentDescription="Add Question"
              />
 

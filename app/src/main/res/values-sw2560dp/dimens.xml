@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="appbar">398.22dp</dimen>
+	<dimen name="large">1280.00dp</dimen>
+	<dimen name="medium">853.33dp</dimen>
+	<dimen name="padding_small">28.44dp</dimen>
+	<dimen name="paddinglarge">113.78dp</dimen>
+	<dimen name="paddingmedium">56.89dp</dimen>
+	<dimen name="small">284.44dp</dimen>
+	<dimen name="small60">426.67dp</dimen>
+	<dimen name="smallmedium">568.89dp</dimen>
+	<dimen name="textheading">99.56dp</dimen>
+	<dimen name="textsize">71.11dp</dimen>
+	<dimen name="xlarge">1706.67dp</dimen>
+</resources>

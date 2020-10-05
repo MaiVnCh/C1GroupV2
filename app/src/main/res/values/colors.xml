@@ -7,10 +7,12 @@
     <color name="colorSecondaryDark">#018786</color>
     <color name="colorSecondaryLight">#85018786</color>
     <color name="colorSecondaryBackground">#2D018786</color>
-    <color name="error">#B00020</color>
+    <color name="error">#BEEA1595</color>
     <color name="grey">#B58A8080</color>
     <color name="background">#fafafa</color>
     <color name="surface">#eeeeee</color>
     <color name="colorText">#424A4A</color>
+    <color name="colorTextHeading">#FF5722</color>
+    FF5722
 
 </resources>
